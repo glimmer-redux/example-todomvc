@@ -1,1 +1,41 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<section class="todoapp">
+  <header class="header">
+    <h1>todos</h1>
+    <input class="new-todo"
+           placeholder="What needs to be done?"
+           onkeydown={{action handleNewTodoKeyDown}}
+           autofocus>
+  </header>
+
+  <section class="main">
+    <ul id="todo-list" class="todo-list">
+      {{#each todos key="@index" as |todo|}}
+        <TodoItem @todo={{todo}}
+          @onEdit={{action editTodo}}
+          @onComplete={{action completeTodo}}
+          @onDestroy={{action deleteTodo}} />
+      {{/each}}
+    </ul>
+  </section>
+
+  {{#if (gt todosCount 0)}}
+    <footer class="footer">
+      <span class="todo-count">
+        <strong>{{todosCount}}</strong> items left
+      </span>
+      <ul class="filters">
+        <li><a onclick={{action showAll}} href="#/" class="{{if (eq filter) "selected"}}">All</a></li>
+        <li><a onclick={{action showActive}} href="#/active" class="{{if (eq filter false) "selected"}}">Active</a></li>
+        <li><a onclick={{action showCompleted}} href="#/completed" class="{{if (eq filter true) "selected"}}">Completed</a></li>
+      </ul>
+    </footer>
+  {{/if}}
+</section>
+
+<footer class="info">
+  <p>Double-click to edit a todo</p>
+  <p>
+    Created by
+    <a href="https://github.com/toranb">Toran Billups</a>
+  </p>
+</footer>
