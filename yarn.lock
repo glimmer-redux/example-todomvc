@@ -2921,9 +2921,9 @@ git-repo-info@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/git-repo-info/-/git-repo-info-1.4.1.tgz#2a072823254aaf62fcf0766007d7b6651bd41943"
 
-glimmer-redux@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/glimmer-redux/-/glimmer-redux-0.1.0.tgz#e80997b92d00346cbb7f13ca53f48c2ccd1e6759"
+glimmer-redux@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/glimmer-redux/-/glimmer-redux-0.1.1.tgz#fb8d2689e51aba675fb545bf9e4a7ef64f320f8a"
   dependencies:
     redux "^3.7.2"
     redux-thunk "^2.2.0"
