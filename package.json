@@ -34,10 +34,9 @@
   },
   "private": true,
   "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "glimmer-redux": "^0.1.0",
     "lodash-es": "^4.17.4",
     "reselect": "^3.0.1",
-    "rollup-plugin-glimmer-redux": "^0.0.4"
+    "rollup-plugin-glimmer-redux": "^1.0.0"
   }
 }
